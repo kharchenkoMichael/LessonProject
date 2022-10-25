@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProjectLesson",
+    "\\ProjectLesson\\UserInterface"
   ],
-  "SelectedNode": "\\D:\\PROJECT C#",
+  "SelectedNode": "\\ProjectLesson\\ProjectLesson.sln",
   "PreviewInSolutionExplorer": false
 }
