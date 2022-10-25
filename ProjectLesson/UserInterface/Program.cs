@@ -2,8 +2,12 @@
 
 using BussinesLogic;
 using Storage;
+using UserInterface;
+
 User myUser = null;
+var userCommandService = new UserCommandService();
 var userService = new UserService();
+var loginService = new LoginService(userService);
 while (true)
 {
     Console.WriteLine("Выберите команду");
@@ -14,10 +18,10 @@ while (true)
     switch (command)
     {
         case "1":
-           myUser = Enter();
+           myUser = loginService.Enter();
             break;
         case "2":
-           myUser = Registration();
+           myUser = loginService.Registration();
             break;
         default:
             Console.WriteLine("Нет такой команды,попробуйте еще");
@@ -30,58 +34,35 @@ while (true)
         break;
     }
 }
-User Registration()
+while (true)
 {
-    string phone = "";
-    string password = "";
-    while (true)
-    {
-        Console.WriteLine("Введите свой номер телефона");
-        phone = Console.ReadLine();
-        Console.WriteLine("Введите свой пароль");
-        password = Console.ReadLine();
-        Console.WriteLine("Введите повторно свой пароль");
-        var secondPassword = Console.ReadLine();
-        if(password == secondPassword)
-        {
-            break;
-        }
-    }
-    var user =  userService.CreateUser(phone,password);
-    Console.WriteLine("Вы успешно зарегистрованы");
-    Console.WriteLine("+ - добавить ваши данные");
+    Console.WriteLine("Выберите команду");
+    Console.WriteLine("1 - посмотреть доступные процедуры");
+    Console.WriteLine("2 - посмотреть свободные даты на ближайшую неделю");
+    Console.WriteLine("3 - записаться");
+    Console.WriteLine("4 - посмотреть список всех моих ближайших процедур");
+    Console.WriteLine("5 - отказаться от процедуры");
+    Console.WriteLine("6 - посмотреть историю моих записей");
     var command = Console.ReadLine();
-    if(command == "+")
+    switch (command)
     {
-        AddUserDetails(user);
-    }
-    return user;
-}
-void AddUserDetails(User user)
-{
-    Console.WriteLine("Введите ваше имя");
-    user.Name = Console.ReadLine();
-    Console.WriteLine("Введите вашу фамилию");
-    user.LastName = Console.ReadLine();
-    userService.UpdateUser(user);
-}
-User Enter()
-{
-    User user = null;
-    string phone = "";
-    string password = "";
-    while (true)
-    {
-        Console.WriteLine("Введите свой phone");
-        phone = Console.ReadLine();
-        Console.WriteLine("Введите свой password");
-        password = Console.ReadLine();
-        user = userService.Login(phone,password);
-        if(user != null)
-        {
+        case "1":
+            userCommandService.ShowAllProcedurs();
             break;
-        }
-
+        case "2":
+            userCommandService.ShowFreeDates();
+            break;
+        case "3":
+            userCommandService.CreateNewRecord();
+            break;
+        case "4":
+            userCommandService.ShowFutureRecord();
+            break;
+        case "5":
+            userCommandService.CancelRecord();
+            break;
+        case "6":
+            userCommandService.ShowPastRecord();
+            break;
     }
-    return user;
 }
