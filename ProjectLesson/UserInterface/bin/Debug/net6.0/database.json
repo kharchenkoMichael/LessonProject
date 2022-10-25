@@ -1,0 +1,40 @@
+{
+  "Users": [
+    {
+      "Name": "Jenya",
+      "LastName": "Murashov",
+      "Phone": "0980912412",
+      "Password": "qweqwer",
+      "IsAdmin": false
+    }
+  ],
+  "Procedurs": [
+    {
+      "Name": "\u041C\u0430\u043D\u0456\u043A\u044E\u0440",
+      "Price": 250,
+      "Time": "01:00:00"
+    },
+    {
+      "Name": "\u041C\u0430\u043D\u0456\u043A\u044E\u0440 \u002B \u043F\u043E\u043A\u0440\u0438\u0442\u0442\u044F",
+      "Price": 400,
+      "Time": "01:30:00"
+    },
+    {
+      "Name": "\u041F\u0435\u0434\u0456\u043A\u044E\u0440",
+      "Price": 200,
+      "Time": "00:40:00"
+    },
+    {
+      "Name": "\u041F\u0435\u0434\u0456\u043A\u044E\u0440 \u002B \u043F\u043E\u043A\u0440\u0438\u0442\u0442\u044F",
+      "Price": 250,
+      "Time": "01:30:00"
+    },
+    {
+      "Name": "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u044F",
+      "Price": 100,
+      "Time": "00:20:00"
+    }
+  ],
+  "Records": [
+  ]
+}
