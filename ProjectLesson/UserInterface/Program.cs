@@ -5,7 +5,8 @@ using Storage;
 using UserInterface;
 
 User myUser = null;
-var userCommandService = new UserCommandService();
+var procedurService = new ProcedurService();
+var userCommandService = new UserCommandService(procedurService);
 var userService = new UserService();
 var loginService = new LoginService(userService);
 while (true)
