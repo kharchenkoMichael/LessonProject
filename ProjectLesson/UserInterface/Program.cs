@@ -2,11 +2,7 @@
 
 using BussinesLogic;
 using Storage;
-
-void Enter()
-{ 
- //TODO : доделать вход
-}
+User myUser = null;
 var userService = new UserService();
 while (true)
 {
@@ -18,10 +14,10 @@ while (true)
     switch (command)
     {
         case "1":
-            Enter();
+           myUser = Enter();
             break;
         case "2":
-            Registration();
+           myUser = Registration();
             break;
         default:
             Console.WriteLine("Нет такой команды,попробуйте еще");
@@ -29,9 +25,12 @@ while (true)
 
 
     }
-
+    if (myUser != null)
+    {
+        break;
+    }
 }
-void Registration()
+User Registration()
 {
     string phone = "";
     string password = "";
@@ -48,7 +47,7 @@ void Registration()
             break;
         }
     }
-   var user =  userService.CreateUser(phone,password);
+    var user =  userService.CreateUser(phone,password);
     Console.WriteLine("Вы успешно зарегистрованы");
     Console.WriteLine("+ - добавить ваши данные");
     var command = Console.ReadLine();
@@ -56,7 +55,7 @@ void Registration()
     {
         AddUserDetails(user);
     }
-
+    return user;
 }
 void AddUserDetails(User user)
 {
@@ -65,4 +64,24 @@ void AddUserDetails(User user)
     Console.WriteLine("Введите вашу фамилию");
     user.LastName = Console.ReadLine();
     userService.UpdateUser(user);
+}
+User Enter()
+{
+    User user = null;
+    string phone = "";
+    string password = "";
+    while (true)
+    {
+        Console.WriteLine("Введите свой phone");
+        phone = Console.ReadLine();
+        Console.WriteLine("Введите свой password");
+        password = Console.ReadLine();
+        user = userService.Login(phone,password);
+        if(user != null)
+        {
+            break;
+        }
+
+    }
+    return user;
 }

@@ -39,7 +39,12 @@ namespace BussinesLogic
             _dataBase.Users.Add(user);
             _dataBase.Save();
             return user;
-        }  
-        
+        }
+
+        public User? Login(string phone, string password)
+        {          
+            return _dataBase.Users.FirstOrDefault(item => item.Phone == phone && item.Password == password);
+        }
     }
+    
 }
