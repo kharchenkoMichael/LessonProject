@@ -1,0 +1,12 @@
+D:\PROJECT C#\ProjectLesson\Storage\bin\Debug\net6.0\Storage.deps.json
+D:\PROJECT C#\ProjectLesson\Storage\bin\Debug\net6.0\Storage.dll
+D:\PROJECT C#\ProjectLesson\Storage\bin\Debug\net6.0\Storage.pdb
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.csproj.AssemblyReference.cache
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.AssemblyInfoInputs.cache
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.AssemblyInfo.cs
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.csproj.CoreCompileInputs.cache
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.dll
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\refint\Storage.dll
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\Storage.pdb
+D:\PROJECT C#\ProjectLesson\Storage\obj\Debug\net6.0\ref\Storage.dll
