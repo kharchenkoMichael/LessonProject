@@ -26,7 +26,13 @@ namespace UserInterface
         }
         public void ShowFreeDates()
         {
-
+            var records = _recordService.GetRecordsOnWeek();
+            Console.WriteLine("Я работа с 10 - 18, но у меня уже есть записи на такое то время");
+            foreach (var item in records.OrderBy(item => item.Item1))
+            {
+                Console.WriteLine($"{item.Item1} - {item.Item2}");
+            }
+            Console.WriteLine("-------------------");
         }
         public void CreateNewRecord()
         {
