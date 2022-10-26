@@ -6,7 +6,8 @@ using UserInterface;
 
 User myUser = null;
 var procedurService = new ProcedurService();
-var userCommandService = new UserCommandService(procedurService);
+var recordService = new RecordService();
+var userCommandService = new UserCommandService(procedurService,recordService);
 var userService = new UserService();
 var loginService = new LoginService(userService);
 while (true)
@@ -57,13 +58,13 @@ while (true)
             userCommandService.CreateNewRecord();
             break;
         case "4":
-            userCommandService.ShowFutureRecord();
+            userCommandService.ShowFutureRecord(myUser);
             break;
         case "5":
             userCommandService.CancelRecord();
             break;
         case "6":
-            userCommandService.ShowPastRecord();
+            userCommandService.ShowPastRecord(myUser);
             break;
     }
 }
