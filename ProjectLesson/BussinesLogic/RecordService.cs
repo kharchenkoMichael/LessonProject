@@ -22,5 +22,10 @@ namespace BussinesLogic
 
             return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserName == user.Name);
         }
+        public IEnumerable<(DateTime,DateTime)> GetRecordsOnWeek()
+        {
+            return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.DateTime < DateTime.Now.AddDays(7))
+                .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name, (record, procedur) => (record.DateTime, record.DateTime.Add(procedur.Time)));
+        }
     }
 }
