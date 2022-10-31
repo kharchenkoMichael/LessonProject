@@ -22,9 +22,28 @@ namespace UserInterface
             throw new NotImplementedException();
         }
 
-        public void CancelRecord(User myUser)
+        public void CancelRecord()
         {
-            throw new NotImplementedException();
+            int index = 1;
+            var records = _recordService.GetFutureRecords().ToList();
+            foreach (var item in records)
+            {
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur}");
+            }
+            while (true)
+            {
+                Console.WriteLine("Введите число которое хотите удалить");
+                if (int.TryParse(Console.ReadLine(), out index))
+                {
+                    if (index > 0 && index <= records.Count())
+                    {
+                        break;
+                    }
+                }
+            }
+            var record = records[index - 1];
+            _recordService.DeleteRecord(record);
+            Console.WriteLine("Ваша дата успешно удалена");
         }
 
         public void CreateNewRecord()

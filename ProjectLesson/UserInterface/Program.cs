@@ -69,7 +69,7 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
                 adminCommandService.CreateNewRecord();
                 break;
             case "4":
-                adminCommandService.CancelRecord(myUser);
+                adminCommandService.CancelRecord();
                 break;
             case "5":
                 adminCommandService.ShowAllNotApproveRecord(myUser);
