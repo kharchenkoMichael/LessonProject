@@ -34,7 +34,7 @@ namespace UserInterface
             }
             Console.WriteLine("-------------------");
         }
-        public void CreateNewRecord(string userName)
+        public void CreateNewRecord(string userPhone)
         {
             string procedurName = "";
             DateTime date = new DateTime();
@@ -60,7 +60,7 @@ namespace UserInterface
                 
               
             }
-            _recordService.CreateRecord(procedurName, date, userName);
+            _recordService.CreateRecord(procedurName, date, userPhone);
             Console.WriteLine("Запись добавлена");
         }
         public void ShowFutureRecord(User user)
@@ -71,9 +71,28 @@ namespace UserInterface
                 Console.WriteLine($"{item.DateTime}, {item.Procedur}");
             }
         }
-        public void CancelRecord()
+        public void CancelRecord(User user)
         {
-
+            int index = 1;
+            var records = _recordService.GetFutureRecords(user).ToList();
+            foreach (var item in records)
+            {
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur}");
+            }
+            while (true)
+            {
+                Console.WriteLine("Введите число которое хотите удалить");
+                if(int.TryParse(Console.ReadLine(), out index))
+                {
+                    if(index > 0 && index <= records.Count())
+                    {
+                        break;
+                    }
+                }
+            }
+            var record = records[index - 1];
+            _recordService.DeleteRecord(record);
+            Console.WriteLine("Ваша дата успешно удалена");
         }
         public void ShowPastRecord(User user)
         {

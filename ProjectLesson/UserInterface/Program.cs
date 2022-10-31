@@ -55,13 +55,13 @@ while (true)
             userCommandService.ShowFreeDates();
             break;
         case "3":
-            userCommandService.CreateNewRecord(myUser.Name);
+            userCommandService.CreateNewRecord(myUser.Phone);
             break;
         case "4":
             userCommandService.ShowFutureRecord(myUser);
             break;
         case "5":
-            userCommandService.CancelRecord();
+            userCommandService.CancelRecord(myUser);
             break;
         case "6":
             userCommandService.ShowPastRecord(myUser);
