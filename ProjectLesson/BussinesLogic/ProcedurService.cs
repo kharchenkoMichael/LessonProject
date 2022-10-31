@@ -15,6 +15,10 @@ namespace BussinesLogic
         public IEnumerable<Procedur> GetAllProcedurs()
         {
             return _dataBase.Procedurs;
-        } 
+        }
+        public Procedur? GetProcedurByName(string procedurName)
+        {
+            return _dataBase.Procedurs.FirstOrDefault(item => item.Name == procedurName);
+        }
     }
 }

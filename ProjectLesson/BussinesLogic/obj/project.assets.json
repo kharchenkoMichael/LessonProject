@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECT C#\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
+      "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
       "projectName": "BussinesLogic",
-      "projectPath": "D:\\PROJECT C#\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
+      "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
       "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECT C#\\ProjectLesson\\BussinesLogic\\obj\\",
+      "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PROJECT C#\\ProjectLesson\\Storage\\Storage.csproj": {
-              "projectPath": "D:\\PROJECT C#\\ProjectLesson\\Storage\\Storage.csproj"
+            "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
+              "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj"
             }
           }
         }

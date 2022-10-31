@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DwqiOR3Ts8Gw1eCBq8fZr5P8F0rQtZlBy5i/tzP+/UTgbK4NwXr57Usq97NEDGoVro3kN8IhjbLIvPz7FkFTzw==",
+  "dgSpecHash": "/Kjg1ISx8JHP10QUzT+5cFaPNQ1zILLLYAwFoBrlznOGiUiRZMTmoXQ0IxodgftAHG2omleD50ifjq6oZDMB3g==",
   "success": true,
-  "projectFilePath": "D:\\PROJECT C#\\ProjectLesson\\Storage\\Storage.csproj",
+  "projectFilePath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
