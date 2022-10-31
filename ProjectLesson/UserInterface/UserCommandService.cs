@@ -60,7 +60,7 @@ namespace UserInterface
                 
               
             }
-            _recordService.CreateRecord(procedurName, date, userPhone);
+            _recordService.CreateRecord(procedurName, date, userPhone,false);
             Console.WriteLine("Запись добавлена");
         }
         public void ShowFutureRecord(User user)
@@ -68,7 +68,7 @@ namespace UserInterface
             var records = _recordService.GetFutureRecords(user);
             foreach(var item in records)
             {
-                Console.WriteLine($"{item.DateTime}, {item.Procedur}");
+                Console.WriteLine($"{item.DateTime}, {item.Procedur}, {item.IsApproved}");
             }
         }
         public void CancelRecord(User user)
@@ -77,7 +77,7 @@ namespace UserInterface
             var records = _recordService.GetFutureRecords(user).ToList();
             foreach (var item in records)
             {
-                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur}");
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur}, {item.IsApproved}");
             }
             while (true)
             {
@@ -99,7 +99,7 @@ namespace UserInterface
             var records = _recordService.GetHistoryRecords(user);
             foreach (var item in records)
             {
-                Console.WriteLine($"{item.DateTime}, {item.Procedur}");
+                Console.WriteLine($"{item.DateTime}, {item.Procedur}, {item.IsApproved}");
             }
         }
     }
