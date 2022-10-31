@@ -45,6 +45,10 @@ namespace BussinesLogic
         {          
             return _dataBase.Users.FirstOrDefault(item => item.Phone == phone && item.Password == password);
         }
+        public User? GetUserByPhone(string phone)
+        {
+            return _dataBase.Users.FirstOrDefault(item => item.Phone == phone);
+        }
     }
     
     

@@ -7,9 +7,9 @@ using UserInterface;
 User myUser = null;
 var procedurService = new ProcedurService();
 var recordService = new RecordService();
-var adminCommandService = new AdminCommandService(recordService);
-var userCommandService = new UserCommandService(procedurService,recordService);
 var userService = new UserService();
+var adminCommandService = new AdminCommandService(recordService,procedurService,userService);
+var userCommandService = new UserCommandService(procedurService,recordService);
 var loginService = new LoginService(userService);
 while (true)
 {
@@ -66,7 +66,7 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
                 adminCommandService.ShowAllFutureRecords();
                 break;
             case "3":
-                adminCommandService.CreateNewRecord(myUser.Phone);
+                adminCommandService.CreateNewRecord();
                 break;
             case "4":
                 adminCommandService.CancelRecord(myUser);
