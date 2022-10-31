@@ -36,7 +36,30 @@ namespace UserInterface
         }
         public void CreateNewRecord()
         {
+            while (true)
+            {
+                Console.WriteLine("Введите название процедуры");
+                string procedurName = Console.ReadLine();
+                var procedur = _procedurService.GetProcedurByName(procedurName);
+                if(procedur != null)
+                {
+                    break;
+                }
 
+            }
+            while (true)
+            {
+                Console.WriteLine("Введите дату");
+                string dateString = Console.ReadLine();
+                if (DateTime.TryParse(dateString, out var date))
+                {
+                    break;
+                }
+                _recordService.CreateRecord(procedurName,dateString,userName)
+                    Console.WriteLine("Запись добавлена");
+              
+            }
+            
         }
         public void ShowFutureRecord(User user)
         {

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECT C#\\ProjectLesson\\Storage\\Storage.csproj",
+      "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
       "projectName": "Storage",
-      "projectPath": "D:\\PROJECT C#\\ProjectLesson\\Storage\\Storage.csproj",
+      "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
       "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECT C#\\ProjectLesson\\Storage\\obj\\",
+      "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
