@@ -27,12 +27,13 @@ namespace BussinesLogic
             return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.DateTime < DateTime.Now.AddDays(7))
                 .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name, (record, procedur) => (record.DateTime, record.DateTime.Add(procedur.Time)));
         }
-        public Record CreateRecord(string procedurName, DateTime dateTime,string userPhone)
+        public Record CreateRecord(string procedurName, DateTime dateTime,string userPhone,bool isApproved)
         {
             var record = new Record();
             record.Procedur = procedurName;
             record.DateTime = dateTime;
             record.UserPhone = userPhone;
+            record.IsApproved = isApproved;
             _dataBase.Records.Add(record);
             _dataBase.Save();
             return record;
@@ -53,6 +54,10 @@ namespace BussinesLogic
         {
             _dataBase.Records.Remove(record);
             _dataBase.Save();
+        }
+        public IEnumerable<Record> GetAllNotApproveRecords()
+        {
+            return _dataBase.Records.Where(item => !item.IsApproved);
         }
     }
 }

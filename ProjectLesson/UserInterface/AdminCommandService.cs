@@ -28,7 +28,7 @@ namespace UserInterface
             var records = _recordService.GetFutureRecords().ToList();
             foreach (var item in records)
             {
-                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur}");
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
             }
             while (true)
             {
@@ -84,7 +84,7 @@ namespace UserInterface
                 }
 
             }
-            _recordService.CreateRecord(procedurName, date, phone);
+            _recordService.CreateRecord(procedurName, date, phone,true);
             Console.WriteLine("Запись добавлена");
         }
 
@@ -93,7 +93,7 @@ namespace UserInterface
             var records = _recordService.GetFutureRecords();
             foreach (var record in records.OrderBy(item => item.DateTime))
             {
-                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}");
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
             }
         }
 
@@ -102,13 +102,17 @@ namespace UserInterface
             var records = _recordService.GetHistoryRecords();
             foreach(var record in records.OrderBy(item => item.DateTime))
             {
-                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}");
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
             }
         }
 
-        public void ShowAllNotApproveRecord(User myUser)
+        public void ShowAllNotApproveRecord()
         {
-            throw new NotImplementedException();
+            var records = _recordService.GetAllNotApproveRecords();
+            foreach( var record in records.OrderBy(item => item.DateTime))
+            {
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
+            }
         }
     }
 }
