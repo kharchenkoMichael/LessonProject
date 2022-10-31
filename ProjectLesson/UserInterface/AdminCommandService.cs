@@ -17,9 +17,28 @@ namespace UserInterface
             _recordService = recordService;
             _userService = userService; 
         }
-        public void ApproveRecord(User myUser)
+        public void ApproveRecord()
         {
-            throw new NotImplementedException();
+            int index = 1;
+            var records = _recordService.GetAllNotApproveRecords().ToList();
+            foreach (var item in records)
+            {
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
+            }
+            while (true)
+            {
+                Console.WriteLine("Введите число которое хотите подтвердить");
+                if (int.TryParse(Console.ReadLine(), out index))
+                {
+                    if (index > 0 && index <= records.Count())
+                    {
+                        break;
+                    }
+                }
+            }
+            var record = records[index - 1];
+            _recordService.ApproveRecord(record);
+            Console.WriteLine("Ваша дата успешно подтверждена");
         }
 
         public void CancelRecord()

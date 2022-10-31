@@ -75,7 +75,7 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
                 adminCommandService.ShowAllNotApproveRecord();
                 break;
             case "6":
-                adminCommandService.ApproveRecord(myUser);
+                adminCommandService.ApproveRecord();
                 break;
         }
     }
