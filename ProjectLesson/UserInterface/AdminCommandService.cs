@@ -1,36 +1,51 @@
 ﻿
+using BussinesLogic;
 using Storage;
+using System.Runtime.CompilerServices;
 
 namespace UserInterface
 {
     public class AdminCommandService
     {
-        internal void ApproveRecord(User myUser)
+        private RecordService _recordService;
+        public AdminCommandService(RecordService recordService)
+        {
+            _recordService = recordService;
+        }
+        public void ApproveRecord(User myUser)
         {
             throw new NotImplementedException();
         }
 
-        internal void CancelRecord(User myUser)
+        public void CancelRecord(User myUser)
         {
             throw new NotImplementedException();
         }
 
-        internal void CreateNewRecord(string phone)
+        public void CreateNewRecord(string phone)
         {
             throw new NotImplementedException();
         }
 
-        internal void ShowAllFutureRecords()
+        public void ShowAllFutureRecords()
         {
-            throw new NotImplementedException();
+            var records = _recordService.GetFutureRecords();
+            foreach (var record in records.OrderBy(item => item.DateTime))
+            {
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}");
+            }
         }
 
-        internal void ShowAllHistoryRecords()
+        public void ShowAllHistoryRecords()
         {
-            throw new NotImplementedException();
+            var records = _recordService.GetHistoryRecords();
+            foreach(var record in records.OrderBy(item => item.DateTime))
+            {
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}");
+            }
         }
 
-        internal void ShowAllNotApproveRecord(User myUser)
+        public void ShowAllNotApproveRecord(User myUser)
         {
             throw new NotImplementedException();
         }

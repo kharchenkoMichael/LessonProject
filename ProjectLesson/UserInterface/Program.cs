@@ -7,7 +7,7 @@ using UserInterface;
 User myUser = null;
 var procedurService = new ProcedurService();
 var recordService = new RecordService();
-var adminCommandService = new AdminCommandService();
+var adminCommandService = new AdminCommandService(recordService);
 var userCommandService = new UserCommandService(procedurService,recordService);
 var userService = new UserService();
 var loginService = new LoginService(userService);
