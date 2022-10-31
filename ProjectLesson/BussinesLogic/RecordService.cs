@@ -59,5 +59,10 @@ namespace BussinesLogic
         {
             return _dataBase.Records.Where(item => !item.IsApproved);
         }
+        public void ApproveRecord(Record record)
+        {
+            record.IsApproved = true;
+            _dataBase.Save();
+        }
     }
 }
