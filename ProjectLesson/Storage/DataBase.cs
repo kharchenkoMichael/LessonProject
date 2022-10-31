@@ -41,9 +41,10 @@ namespace Storage
         }
         public void Save()
         {
+            File.Delete(path);
             string jsonString = JsonSerializer.Serialize(this);
             using (var writer = new StreamWriter(new FileStream(path, FileMode.OpenOrCreate)))
-            {
+            {               
                 writer.Write(jsonString);
             }
         }

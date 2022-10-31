@@ -39,6 +39,16 @@ namespace BussinesLogic
 
 
         }
+        public IEnumerable<Record> GetFutureRecords()
+        {
+
+            return _dataBase.Records.Where(item => item.DateTime > DateTime.Now);
+        }
+        public IEnumerable<Record> GetHistoryRecords()
+        {
+
+            return _dataBase.Records.Where(item => item.DateTime < DateTime.Now);
+        }
         public void DeleteRecord(Record record)
         {
             _dataBase.Records.Remove(record);
