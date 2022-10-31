@@ -34,12 +34,14 @@ namespace UserInterface
             }
             Console.WriteLine("-------------------");
         }
-        public void CreateNewRecord()
+        public void CreateNewRecord(string userName)
         {
+            string procedurName = "";
+            DateTime date = new DateTime();
             while (true)
             {
                 Console.WriteLine("Введите название процедуры");
-                string procedurName = Console.ReadLine();
+                procedurName = Console.ReadLine();
                 var procedur = _procedurService.GetProcedurByName(procedurName);
                 if(procedur != null)
                 {
@@ -51,15 +53,15 @@ namespace UserInterface
             {
                 Console.WriteLine("Введите дату");
                 string dateString = Console.ReadLine();
-                if (DateTime.TryParse(dateString, out var date))
+                if (DateTime.TryParse(dateString, out date))
                 {
                     break;
                 }
-                _recordService.CreateRecord(procedurName,dateString,userName)
-                    Console.WriteLine("Запись добавлена");
+                
               
             }
-            
+            _recordService.CreateRecord(procedurName, date, userName);
+            Console.WriteLine("Запись добавлена");
         }
         public void ShowFutureRecord(User user)
         {

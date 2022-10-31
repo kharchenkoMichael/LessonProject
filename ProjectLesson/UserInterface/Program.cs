@@ -55,7 +55,7 @@ while (true)
             userCommandService.ShowFreeDates();
             break;
         case "3":
-            userCommandService.CreateNewRecord();
+            userCommandService.CreateNewRecord(myUser.Name);
             break;
         case "4":
             userCommandService.ShowFutureRecord(myUser);
