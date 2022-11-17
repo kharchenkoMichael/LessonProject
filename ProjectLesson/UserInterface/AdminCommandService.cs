@@ -1,22 +1,12 @@
 ﻿
-using BussinesLogic;
-using Storage;
+
 using System.Runtime.CompilerServices;
 
 namespace UserInterface
 {
     public class AdminCommandService
     {
-        private RecordService _recordService;
-        private ProcedurService _procedurService;
-        private UserService _userService;
-       
-        public AdminCommandService(RecordService recordService, ProcedurService procedurService, UserService userService)
-        {
-            _procedurService = procedurService;
-            _recordService = recordService;
-            _userService = userService; 
-        }
+    
         public void ApproveRecord()
         {
             int index = 1;

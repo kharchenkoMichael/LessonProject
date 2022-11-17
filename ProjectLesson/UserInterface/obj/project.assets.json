@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "BussinesLogic/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Storage": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/BussinesLogic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BussinesLogic.dll": {}
-        }
-      },
       "Storage/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -28,11 +15,6 @@
     }
   },
   "libraries": {
-    "BussinesLogic/1.0.0": {
-      "type": "project",
-      "path": "../BussinesLogic/BussinesLogic.csproj",
-      "msbuildProject": "../BussinesLogic/BussinesLogic.csproj"
-    },
     "Storage/1.0.0": {
       "type": "project",
       "path": "../Storage/Storage.csproj",
@@ -41,7 +23,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "BussinesLogic >= 1.0.0",
       "Storage >= 1.0.0"
     ]
   },
@@ -72,9 +53,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj": {
-              "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj"
-            },
             "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
               "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj"
             }
