@@ -36,3 +36,21 @@ D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\refint\
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.genruntimeconfig.cache
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\ref\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.exe
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.deps.json
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.runtimeconfig.json
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.AssemblyReference.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.AssemblyInfoInputs.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.AssemblyInfo.cs
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.CoreCompileInputs.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.CopyComplete
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\refint\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.genruntimeconfig.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\ref\UserInterface.dll

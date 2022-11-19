@@ -35,7 +35,7 @@ namespace Storage
                 Procedurs.Add(new Procedur() { Name = "Pedikur", Price = 200, Time = new TimeSpan(0, 40, 0) });
                 Procedurs.Add(new Procedur() { Name = "Pedikur + pokruttya", Price = 250, Time = new TimeSpan(1, 30, 0) });
                 Procedurs.Add(new Procedur() { Name = "Ysilenie", Price = 100, Time = new TimeSpan(0, 20, 0) });
-
+                Save();
             }
           
         }

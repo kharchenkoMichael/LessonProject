@@ -29,7 +29,7 @@ namespace UserInterface
                 }
             }
             using var client = new HttpClient();
-            var user = new User() {Phone = phone, Password = password};
+            var user = new User() {Phone = phone, Password = password, IsAdmin = false};
             client.PostAsync($"{Constants.BaseURL}/api/user", JsonContent.Create(user)).Wait();
             Console.WriteLine("Вы успешно зарегистрованы");
             Console.WriteLine("+ - добавить ваши данные");
@@ -62,7 +62,15 @@ namespace UserInterface
                 password = Console.ReadLine();
                 using var client = new HttpClient();
                 var responce = client.GetAsync($"{Constants.BaseURL}/api/user/{phone}/{password}").Result;
-                user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result);
+                var text = responce.Content.ReadAsStringAsync().Result;
+                if (string.IsNullOrEmpty(text))
+                {
+                    break;
+                }
+                user = JsonSerializer.Deserialize<User>(text, new JsonSerializerOptions()
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                });
                 if (user != null)
                 {
                     break;

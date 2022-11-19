@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4DrtdlCwDHFmduadB3fNYsHDeVmQlU2C3utOrlKVep836pZo5keYqE2Um7qK76el2iZyjkJfytxmNcnj+kHxnw==",
+  "dgSpecHash": "8FiciYFqYya/0I5qYRAdHoxW4ltC5a6ABCZqyF2e3Pm9j+VSCQXr02JaaZjq7kg7PRlPH/MkYv+iex5l/DeKRA==",
   "success": true,
-  "projectFilePath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
+  "projectFilePath": "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

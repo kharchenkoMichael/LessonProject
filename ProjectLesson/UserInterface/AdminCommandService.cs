@@ -15,7 +15,10 @@ namespace UserInterface
             int index = 1;
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/not-approve").Result;
-            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            });
             foreach (var item in records)
             {
                 Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
@@ -41,7 +44,10 @@ namespace UserInterface
             int index = 1;
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/future").Result;
-            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            });
             foreach (var item in records)
             {
                 Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
@@ -74,7 +80,10 @@ namespace UserInterface
                 Console.WriteLine("Введите название процедуры");
                 procedurName = Console.ReadLine();
                 var responce = client.GetAsync($"{Constants.BaseURL}/api/procedur/{procedurName}").Result;
-                var procedur = JsonSerializer.Deserialize<Procedur>(responce.Content.ReadAsStringAsync().Result);
+                var procedur = JsonSerializer.Deserialize<Procedur>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                });
                 if (procedur != null)
                 {
                     break;
@@ -97,7 +106,10 @@ namespace UserInterface
                 Console.WriteLine("Введите номер телефона клиента");
                 phone = Console.ReadLine();
                 var responce = client.GetAsync($"{Constants.BaseURL}/api/user/{phone}").Result;
-                var user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result);
+                var user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                });
                 if (user != null)
                 {
                     break;
@@ -113,7 +125,10 @@ namespace UserInterface
         {
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/future").Result;
-            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            });
             foreach (var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
@@ -124,7 +139,10 @@ namespace UserInterface
         {
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/history").Result;
-            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            });
             foreach(var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
@@ -135,7 +153,10 @@ namespace UserInterface
         {
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/not-approve").Result;
-            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            });
             foreach( var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");

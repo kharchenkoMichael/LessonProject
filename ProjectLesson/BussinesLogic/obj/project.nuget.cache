@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UqjEzsf4D2XWv9TGjcushq/QY+wDkktOBKcYpRGDAVTPzR80VXM2YXvg9lwvT75iscV/OclUmDIsM96BVR97FQ==",
+  "dgSpecHash": "o5IhLoZSAVL2FDKzfdAMgj05465JLu5/vPW9Z3IZmKH/bkpXKoF7bBXgzT7LT17BjmaXnh93pi8rL5extDgnhg==",
   "success": true,
-  "projectFilePath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
+  "projectFilePath": "C:\\myProject\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

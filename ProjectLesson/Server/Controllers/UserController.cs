@@ -21,7 +21,7 @@ namespace Server.Controllers
  
         }
     
-    [HttpGet("{phoneNumber}")]
+        [HttpGet("{phoneNumber}")]
         public User? GetUserByPhone(string phoneNumber)
         {
             return _userService.GetUserByPhone(phoneNumber);
