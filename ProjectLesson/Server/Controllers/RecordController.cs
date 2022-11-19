@@ -24,6 +24,11 @@ namespace Server.Controllers
         {
             return _recordService.GetHistoryRecords().ToList();
         }
+        [HttpGet("history/{userPhone}")]
+        public List<Record> GetHistoryRecordByUser(string userPhone)
+        {
+            return _recordService.GetHistoryRecords(userPhone).ToList();
+        }
         [HttpGet("not-approve")]
         public List<Record> GetAllNotApproveRecords()
         {
@@ -33,6 +38,11 @@ namespace Server.Controllers
         public List<Record> GetFutureRecords()
         {
             return _recordService.GetFutureRecords().ToList();
+        }
+        [HttpGet("future/{userPhone}")]
+        public List<Record> GetFutureRecordsByUser(string userPhone)
+        {
+            return _recordService.GetFutureRecords(userPhone).ToList();
         }
         [HttpPost("approve")]
         public IActionResult PostApprove([FromBody] Record record)
@@ -47,11 +57,12 @@ namespace Server.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        public IActionResult DeleteRecord([FromBody]Record record)
+        [HttpDelete("{recordId}")]
+        public IActionResult DeleteRecord(int recordId)
         {
-            _recordService.DeleteRecord(record);
+            _recordService.DeleteRecord(recordId);
             return Ok();
-        }
+        } 
+
     }
 }

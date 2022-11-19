@@ -1,16 +1,13 @@
 ﻿
 
-using BussinesLogic;
+
 using Storage;
 using UserInterface;
 
 User myUser = null;
-var procedurService = new ProcedurService();
-var recordService = new RecordService();
-var userService = new UserService();
-var adminCommandService = new AdminCommandService(recordService,procedurService,userService);
-var userCommandService = new UserCommandService(procedurService,recordService);
-var loginService = new LoginService(userService);
+var adminCommandService = new AdminCommandService();
+var userCommandService = new UserCommandService();
+var loginService = new LoginService();
 while (true)
 {
     Console.WriteLine("Выберите команду");

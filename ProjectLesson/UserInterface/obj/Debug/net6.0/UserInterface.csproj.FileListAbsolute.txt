@@ -23,9 +23,7 @@ D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInt
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.runtimeconfig.json
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.pdb
-D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\BussinesLogic.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.dll
-D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\BussinesLogic.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.AssemblyReference.cache
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.GeneratedMSBuildEditorConfig.editorconfig

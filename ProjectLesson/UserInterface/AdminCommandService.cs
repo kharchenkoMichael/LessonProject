@@ -1,16 +1,21 @@
 ﻿
 
+using Storage;
+using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace UserInterface
 {
     public class AdminCommandService
     {
     
-        public void ApproveRecord()
+        public async void ApproveRecord()
         {
             int index = 1;
-            var records = _recordService.GetAllNotApproveRecords().ToList();
+            using var client = new HttpClient();
+            var responce = client.GetAsync($"{Constants.BaseURL}/api/record/not-approve").Result;
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
             foreach (var item in records)
             {
                 Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
@@ -27,14 +32,16 @@ namespace UserInterface
                 }
             }
             var record = records[index - 1];
-            _recordService.ApproveRecord(record);
+            client.PostAsync($"{Constants.BaseURL}/api/record/approve", JsonContent.Create(record)).Wait();
             Console.WriteLine("Ваша дата успешно подтверждена");
         }
 
         public void CancelRecord()
         {
             int index = 1;
-            var records = _recordService.GetFutureRecords().ToList();
+            using var client = new HttpClient();
+            var responce = client.GetAsync($"{Constants.BaseURL}/api/record/future").Result;
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
             foreach (var item in records)
             {
                 Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
@@ -51,12 +58,14 @@ namespace UserInterface
                 }
             }
             var record = records[index - 1];
-            _recordService.DeleteRecord(record);
+            client.DeleteAsync($"{Constants.BaseURL}/api/record/{record.Id}").Wait();
             Console.WriteLine("Ваша дата успешно удалена");
         }
 
         public void CreateNewRecord()
         {
+            using var client = new HttpClient();
+
             string procedurName = "";
             string phone = "";
             DateTime date = new DateTime();
@@ -64,7 +73,8 @@ namespace UserInterface
             {
                 Console.WriteLine("Введите название процедуры");
                 procedurName = Console.ReadLine();
-                var procedur = _procedurService.GetProcedurByName(procedurName);
+                var responce = client.GetAsync($"{Constants.BaseURL}/api/procedur/{procedurName}").Result;
+                var procedur = JsonSerializer.Deserialize<Procedur>(responce.Content.ReadAsStringAsync().Result);
                 if (procedur != null)
                 {
                     break;
@@ -86,20 +96,24 @@ namespace UserInterface
             {
                 Console.WriteLine("Введите номер телефона клиента");
                 phone = Console.ReadLine();
-                var user = _userService.GetUserByPhone(phone);
-                if(user != null)
+                var responce = client.GetAsync($"{Constants.BaseURL}/api/user/{phone}").Result;
+                var user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result);
+                if (user != null)
                 {
                     break;
                 }
 
             }
-            _recordService.CreateRecord(procedurName, date, phone,true);
+            var record = new Record() {Procedur = procedurName, DateTime = date, UserPhone = phone, IsApproved = true };
+            client.PostAsync($"{Constants.BaseURL}/api/record/record", JsonContent.Create(record)).Wait();
             Console.WriteLine("Запись добавлена");
         }
 
         public void ShowAllFutureRecords()
         {
-            var records = _recordService.GetFutureRecords();
+            using var client = new HttpClient();
+            var responce = client.GetAsync($"{Constants.BaseURL}/api/record/future").Result;
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
             foreach (var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
@@ -108,7 +122,9 @@ namespace UserInterface
 
         public void ShowAllHistoryRecords()
         {
-            var records = _recordService.GetHistoryRecords();
+            using var client = new HttpClient();
+            var responce = client.GetAsync($"{Constants.BaseURL}/api/record/history").Result;
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
             foreach(var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
@@ -117,7 +133,9 @@ namespace UserInterface
 
         public void ShowAllNotApproveRecord()
         {
-            var records = _recordService.GetAllNotApproveRecords();
+            using var client = new HttpClient();
+            var responce = client.GetAsync($"{Constants.BaseURL}/api/record/not-approve").Result;
+            var records = JsonSerializer.Deserialize<List<Record>>(responce.Content.ReadAsStringAsync().Result);
             foreach( var record in records.OrderBy(item => item.DateTime))
             {
                 Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");

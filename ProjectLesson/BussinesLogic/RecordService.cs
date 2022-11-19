@@ -12,15 +12,15 @@ namespace BussinesLogic
             _dataBase = new DataBase();
             _dataBase.InitDataBase();
         }
-        public IEnumerable<Record> GetFutureRecords(User user)
+        public IEnumerable<Record> GetFutureRecords(string userPhone)
         {
 
-           return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.UserPhone == user.Phone);
+           return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.UserPhone == userPhone);
         }
-        public IEnumerable<Record> GetHistoryRecords(User user)
+        public IEnumerable<Record> GetHistoryRecords(string userPhone)
         {
 
-            return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserPhone == user.Phone);
+            return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserPhone == userPhone);
         }
         public IEnumerable<(DateTime,DateTime)> GetRecordsOnWeek()
         {
@@ -46,8 +46,14 @@ namespace BussinesLogic
 
             return _dataBase.Records.Where(item => item.DateTime < DateTime.Now);
         }
-        public void DeleteRecord(Record record)
+        public void DeleteRecord(int id)
         {
+            var record = _dataBase.Records.FirstOrDefault(item => item.Id == id);
+            if (record == null)
+            {
+                //TODO:throw error not found
+                return;
+            }
             _dataBase.Records.Remove(record);
             _dataBase.Save();
         }

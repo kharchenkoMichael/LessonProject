@@ -8,19 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "UserInterface/1.0.0": {
         "dependencies": {
-          "BussinesLogic": "1.0.0",
           "Storage": "1.0.0"
         },
         "runtime": {
           "UserInterface.dll": {}
-        }
-      },
-      "BussinesLogic/1.0.0": {
-        "dependencies": {
-          "Storage": "1.0.0"
-        },
-        "runtime": {
-          "BussinesLogic.dll": {}
         }
       },
       "Storage/1.0.0": {
@@ -32,11 +23,6 @@
   },
   "libraries": {
     "UserInterface/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BussinesLogic/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

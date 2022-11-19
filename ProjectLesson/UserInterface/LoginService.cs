@@ -1,18 +1,16 @@
 ﻿
 
-using BussinesLogic;
+
 using Storage;
+using System.Net.Http.Json;
+using System.Numerics;
+using System.Text.Json;
 
 namespace UserInterface
 {
     public class LoginService
     {
-        private UserService _userService;
-
-        public LoginService(UserService userService)
-        {
-            _userService = userService;
-        }
+       
         public User Registration()
         {
             string phone = "";
@@ -30,7 +28,9 @@ namespace UserInterface
                     break;
                 }
             }
-            var user = _userService.CreateUser(phone, password);
+            using var client = new HttpClient();
+            var user = new User() {Phone = phone, Password = password};
+            client.PostAsync($"{Constants.BaseURL}/api/user", JsonContent.Create(user)).Wait();
             Console.WriteLine("Вы успешно зарегистрованы");
             Console.WriteLine("+ - добавить ваши данные");
             var command = Console.ReadLine();
@@ -46,11 +46,12 @@ namespace UserInterface
             user.Name = Console.ReadLine();
             Console.WriteLine("Введите вашу фамилию");
             user.LastName = Console.ReadLine();
-            _userService.UpdateUser(user);
+            using var client = new HttpClient();
+            client.PutAsync($"{Constants.BaseURL}/api/user", JsonContent.Create(user)).Wait();
         }
         public User Enter()
         {
-            User user = null;
+            User? user = null;
             string phone = "";
             string password = "";
             while (true)
@@ -59,7 +60,9 @@ namespace UserInterface
                 phone = Console.ReadLine();
                 Console.WriteLine("Введите свой password");
                 password = Console.ReadLine();
-                user = _userService.Login(phone, password);
+                using var client = new HttpClient();
+                var responce = client.GetAsync($"{Constants.BaseURL}/api/user/{phone}/{password}").Result;
+                user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result);
                 if (user != null)
                 {
                     break;
