@@ -8,10 +8,9 @@ namespace BussinesLogic
     public class RecordService
     {
         private DataBase _dataBase;
-        public RecordService()
+        public RecordService(DataBase dataBase)
         {
-            _dataBase = new DataBase();
-            _dataBase.InitDataBase();
+            _dataBase = dataBase;
         }
         public IEnumerable<Record> GetFutureRecords(string userPhone)
         {
@@ -26,7 +25,7 @@ namespace BussinesLogic
         public IEnumerable<RecordTuppleResponse> GetRecordsOnWeek()
         {
             return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.DateTime < DateTime.Now.AddDays(7))
-            .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name,
+            .Join(_dataBase.Procedurs, record => record.ProcedurId, procedur => procedur.Id,
             (record, procedur) => new RecordTuppleResponse() { RecordStart = record.DateTime, RecordEnd = record.DateTime.Add(procedur.Time) });
         }
         public Record CreateRecord(Record record)

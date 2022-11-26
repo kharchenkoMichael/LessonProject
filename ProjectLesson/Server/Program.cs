@@ -1,8 +1,11 @@
 using BussinesLogic;
+using Microsoft.EntityFrameworkCore;
+using Storage;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<DataBase>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<RecordService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProcedurService>();

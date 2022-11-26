@@ -73,7 +73,7 @@ namespace UserInterface
                 
               
             }
-            var record = new Record() { Procedur = procedurName, DateTime = date, UserPhone = userPhone, IsApproved = false };
+            var record = new Record() { ProcedurId = 0, DateTime = date, UserPhone = userPhone, IsApproved = false }; //TODO Chose ProcedurId
             client.PostAsync($"{Constants.BaseURL}/api/record/record", JsonContent.Create(record)).Wait();
             Console.WriteLine("Запись добавлена");
         }

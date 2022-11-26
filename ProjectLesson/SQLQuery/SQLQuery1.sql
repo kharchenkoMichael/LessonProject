@@ -1,0 +1,30 @@
+CREATE DATABASE ProjectLesson;
+USE ProjectLesson;
+
+
+CREATE TABLE Users(
+Phone NVARCHAR(10) NOT NULL PRIMARY KEY,
+Passwarod NVARCHAR(20),
+Name NVARCHAR(20),
+LastName NVARCHAR(20),
+IsAdmin BIT);
+
+
+
+CREATE TABLE Procedurs(
+Id INT PRIMARY KEY IDENTITY(1,1),
+Name NVARCHAR(30),
+Price INT,
+Time TIME);
+
+
+
+CREATE TABLE Records(
+Id INT PRIMARY KEY IDENTITY(1,1),
+UserPhone NVARCHAR(10),
+ProcedurId INT,
+DateTime DATETIME2,
+IsApprove BIT
+FOREIGN KEY (UserPhone) REFERENCES Users(Phone),
+FOREIGN KEY (ProcedurId) REFERENCES Procedurs(Id)
+);

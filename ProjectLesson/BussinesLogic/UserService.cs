@@ -8,10 +8,9 @@ namespace BussinesLogic
     public class UserService
     {
         private DataBase _dataBase;
-        public UserService()
+        public UserService(DataBase dataBase)
         {
-            _dataBase = new DataBase();
-            _dataBase.InitDataBase();
+            _dataBase = dataBase;
         }
 
         public void UpdateUser(User user)
