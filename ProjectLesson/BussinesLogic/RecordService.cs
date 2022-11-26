@@ -32,7 +32,7 @@ namespace BussinesLogic
         {
         
             _dataBase.Records.Add(record);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
             return record;
 
 
@@ -56,7 +56,7 @@ namespace BussinesLogic
                 return;
             }
             _dataBase.Records.Remove(record);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
         }
         public IEnumerable<Record> GetAllNotApproveRecords()
         {
@@ -65,7 +65,7 @@ namespace BussinesLogic
         public void ApproveRecord(Record record)
         {
             record.IsApproved = true;
-            _dataBase.Save();
+            _dataBase.SaveChanges();
         }
     }
 }

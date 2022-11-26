@@ -4,7 +4,7 @@ USE ProjectLesson;
 
 CREATE TABLE Users(
 Phone NVARCHAR(10) NOT NULL PRIMARY KEY,
-Passwarod NVARCHAR(20),
+Password NVARCHAR(20),
 Name NVARCHAR(20),
 LastName NVARCHAR(20),
 IsAdmin BIT);

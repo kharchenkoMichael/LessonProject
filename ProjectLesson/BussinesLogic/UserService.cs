@@ -23,7 +23,7 @@ namespace BussinesLogic
             }
             userFromDataBase.Name = user.Name;
             userFromDataBase.LastName = user.LastName;
-            _dataBase.Save();
+            _dataBase.SaveChanges();
         }
 
         public User CreateUser(User user)
@@ -34,7 +34,7 @@ namespace BussinesLogic
             }
             
             _dataBase.Users.Add(user);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
             return user;
         }
 
