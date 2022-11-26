@@ -2,6 +2,7 @@
 
 
 using Storage;
+using Storage.Response;
 using System.Net.Http.Json;
 using System.Numerics;
 using System.Text.Json;
@@ -29,14 +30,15 @@ namespace UserInterface
         {
             using var client = new HttpClient();
             var responce = client.GetAsync($"{Constants.BaseURL}/api/record/week").Result;
-            var records = JsonSerializer.Deserialize<List<(DateTime, DateTime)>>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
+            var responseContent = responce.Content.ReadAsStringAsync().Result;
+            var records = JsonSerializer.Deserialize<List<RecordTuppleResponse>>(responseContent, new JsonSerializerOptions()
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             });
             Console.WriteLine("Я работа с 10 - 18, но у меня уже есть записи на такое то время");
-            foreach (var item in records.OrderBy(item => item.Item1))
+            foreach (var item in records.OrderBy(item => item.RecordStart))
             {
-                Console.WriteLine($"{item.Item1} - {item.Item2}");
+                Console.WriteLine($"{item.RecordStart} - {item.RecordEnd}");
             }
             Console.WriteLine("-------------------");
         }
@@ -71,7 +73,7 @@ namespace UserInterface
                 
               
             }
-            var record = new Record() { Procedur = procedurName, DateTime = date, UserPhone = userPhone, IsApproved = true };
+            var record = new Record() { Procedur = procedurName, DateTime = date, UserPhone = userPhone, IsApproved = false };
             client.PostAsync($"{Constants.BaseURL}/api/record/record", JsonContent.Create(record)).Wait();
             Console.WriteLine("Запись добавлена");
         }

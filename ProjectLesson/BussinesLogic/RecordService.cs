@@ -1,6 +1,7 @@
 ﻿
 
 using Storage;
+using Storage.Response;
 
 namespace BussinesLogic
 {
@@ -22,10 +23,11 @@ namespace BussinesLogic
 
             return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserPhone == userPhone);
         }
-        public IEnumerable<(DateTime,DateTime)> GetRecordsOnWeek()
+        public IEnumerable<RecordTuppleResponse> GetRecordsOnWeek()
         {
             return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.DateTime < DateTime.Now.AddDays(7))
-                .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name, (record, procedur) => (record.DateTime, record.DateTime.Add(procedur.Time)));
+            .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name,
+            (record, procedur) => new RecordTuppleResponse() { RecordStart = record.DateTime, RecordEnd = record.DateTime.Add(procedur.Time) });
         }
         public Record CreateRecord(Record record)
         {

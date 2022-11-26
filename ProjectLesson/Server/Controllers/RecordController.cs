@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Storage;
+using Storage.Response;
 
 namespace Server.Controllers
 {
@@ -15,7 +16,7 @@ namespace Server.Controllers
             _recordService = recordService;
         }
         [HttpGet("week")]
-        public List<(DateTime, DateTime)> GetRecordsOnWeek()
+        public List<RecordTuppleResponse> GetRecordsOnWeek()
         {
             return _recordService.GetRecordsOnWeek().ToList();
         }
