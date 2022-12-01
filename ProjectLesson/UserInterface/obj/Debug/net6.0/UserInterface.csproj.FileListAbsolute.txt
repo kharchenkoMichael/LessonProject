@@ -23,9 +23,7 @@ D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInt
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.runtimeconfig.json
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.pdb
-D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\BussinesLogic.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.dll
-D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\BussinesLogic.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.AssemblyReference.cache
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.GeneratedMSBuildEditorConfig.editorconfig
@@ -38,3 +36,68 @@ D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\refint\
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.genruntimeconfig.cache
 D:\PROJECT C#\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\ref\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.exe
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.deps.json
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.runtimeconfig.json
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\UserInterface.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Storage.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.AssemblyReference.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.AssemblyInfoInputs.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.AssemblyInfo.cs
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.CoreCompileInputs.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.csproj.CopyComplete
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\refint\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.pdb
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\UserInterface.genruntimeconfig.cache
+C:\myProject\LessonProject\ProjectLesson\UserInterface\obj\Debug\net6.0\ref\UserInterface.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Azure.Core.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Azure.Identity.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Memory.Data.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\myProject\LessonProject\ProjectLesson\UserInterface\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll

@@ -8,10 +8,9 @@ namespace BussinesLogic
     public class UserService
     {
         private DataBase _dataBase;
-        public UserService()
+        public UserService(DataBase dataBase)
         {
-            _dataBase = new DataBase();
-            _dataBase.InitDataBase();
+            _dataBase = dataBase;
         }
 
         public void UpdateUser(User user)
@@ -19,29 +18,26 @@ namespace BussinesLogic
             var userFromDataBase = _dataBase.Users.FirstOrDefault(item => item.Phone == user.Phone);
             if (userFromDataBase == null)
             {
-                Console.WriteLine("user с таким номером телефона в базе данных нет");
-                return;
+                throw new ArgumentException($"couldn't find user with phone {user.Phone}");
             }
             userFromDataBase.Name = user.Name;
             userFromDataBase.LastName = user.LastName;
-            _dataBase.Save();
+            _dataBase.SaveChanges();
         }
 
-        public User CreateUser(string phone, string password)
+        public User CreateUser(User user)
         {
-            if (_dataBase.Users.Any(item => item.Phone == phone))
+            if (_dataBase.Users.Any(item => item.Phone == user.Phone))
             {
-                throw new Exception("user с таким номером телефона уже существует");
+                throw new Exception("user whith this phone already exist");
             }
-            var user = new User();
-            user.Phone = phone;
-            user.Password = password;
+            
             _dataBase.Users.Add(user);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
             return user;
         }
 
-        public User? Login(string phone, string password)
+        public User? Login(string phone,string password)
         {          
             return _dataBase.Users.FirstOrDefault(item => item.Phone == phone && item.Password == password);
         }

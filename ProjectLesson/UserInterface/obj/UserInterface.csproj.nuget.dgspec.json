@@ -1,79 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj": {}
+    "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj": {}
   },
   "projects": {
-    "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj": {
+    "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
-        "projectName": "BussinesLogic",
-        "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj",
-        "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
-                "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
+        "projectUniqueName": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
         "projectName": "Storage",
-        "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
-        "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\obj\\",
+        "projectPath": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
+        "packagesPath": "C:\\Users\\mykhailo.kharchenko\\.nuget\\packages\\",
+        "outputPath": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mykhailo.kharchenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/3M-Cloud/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -98,6 +40,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -114,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj": {
+    "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
+        "projectUniqueName": "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
         "projectName": "UserInterface",
-        "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
-        "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\UserInterface\\obj\\",
+        "projectPath": "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\UserInterface.csproj",
+        "packagesPath": "C:\\Users\\mykhailo.kharchenko\\.nuget\\packages\\",
+        "outputPath": "C:\\myProject\\LessonProject\\ProjectLesson\\UserInterface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mykhailo.kharchenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,17 +94,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/3M-Cloud/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj": {
-                "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\BussinesLogic\\BussinesLogic.csproj"
-              },
-              "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
-                "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj"
+              "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj": {
+                "projectPath": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj"
               }
             }
           }
@@ -176,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

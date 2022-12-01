@@ -22,3 +22,19 @@ D:\PROJECT C#\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\refint\Storage.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\ref\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\Storage\bin\Debug\net6.0\Storage.deps.json
+C:\myProject\LessonProject\ProjectLesson\Storage\bin\Debug\net6.0\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\Storage\bin\Debug\net6.0\Storage.pdb
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.csproj.AssemblyReference.cache
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.GeneratedMSBuildEditorConfig.editorconfig
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.AssemblyInfoInputs.cache
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.AssemblyInfo.cs
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.csproj.CoreCompileInputs.cache
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\refint\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.pdb
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\ref\Storage.dll
+D:\PROJECT C#\LessonProject\ProjectLesson\Storage\bin\Debug\net6.0\Storage.runtimeconfig.json
+D:\PROJECT C#\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.genruntimeconfig.cache
+C:\myProject\LessonProject\ProjectLesson\Storage\bin\Debug\net6.0\Storage.runtimeconfig.json
+C:\myProject\LessonProject\ProjectLesson\Storage\obj\Debug\net6.0\Storage.genruntimeconfig.cache

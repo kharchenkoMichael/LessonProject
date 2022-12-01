@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore.Scaffolding.Metadata;
 using Storage;
 
 namespace BussinesLogic
@@ -7,10 +8,10 @@ namespace BussinesLogic
     public class ProcedurService
     {
         private DataBase _dataBase;
-        public ProcedurService()
+        public ProcedurService(DataBase dataBase)
         {
-            _dataBase = new DataBase();
-            _dataBase.InitDataBase();
+            _dataBase = dataBase;
+
         }
         public IEnumerable<Procedur> GetAllProcedurs()
         {

@@ -28,3 +28,18 @@ D:\PROJECT C#\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\Bussine
 D:\PROJECT C#\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\refint\BussinesLogic.dll
 D:\PROJECT C#\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.pdb
 D:\PROJECT C#\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\ref\BussinesLogic.dll
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\bin\Debug\net6.0\BussinesLogic.deps.json
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\bin\Debug\net6.0\BussinesLogic.dll
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\bin\Debug\net6.0\BussinesLogic.pdb
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\bin\Debug\net6.0\Storage.dll
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\bin\Debug\net6.0\Storage.pdb
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.csproj.AssemblyReference.cache
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.AssemblyInfoInputs.cache
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.AssemblyInfo.cs
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.csproj.CoreCompileInputs.cache
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.csproj.CopyComplete
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.dll
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\refint\BussinesLogic.dll
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\BussinesLogic.pdb
+C:\myProject\LessonProject\ProjectLesson\BussinesLogic\obj\Debug\net6.0\ref\BussinesLogic.dll

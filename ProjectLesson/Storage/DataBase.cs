@@ -1,17 +1,28 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
+using System.Security.Cryptography;
 using System.Text.Json;
 
 namespace Storage
 {
-    public class DataBase
+    public class DataBase : DbContext
     {
-        public ICollection<User> Users { get; set; } = new List<User>();
-        public ICollection<Procedur> Procedurs { get; set; } = new List<Procedur>();
-        public ICollection<Record> Records { get; set; } = new List<Record>();
+        public DbSet<User> Users { get; set; }
+        public DbSet<Procedur> Procedurs { get; set; }
+        public DbSet<Record> Records { get; set; }
 
         private const string path = "database.json";
+        public DataBase()
+        {
+
+        }
+        public DataBase(DbContextOptions<DataBase> options)
+            :base(options)
+        {
+
+        }
 
         public void InitDataBase()
         {
@@ -35,7 +46,7 @@ namespace Storage
                 Procedurs.Add(new Procedur() { Name = "Pedikur", Price = 200, Time = new TimeSpan(0, 40, 0) });
                 Procedurs.Add(new Procedur() { Name = "Pedikur + pokruttya", Price = 250, Time = new TimeSpan(1, 30, 0) });
                 Procedurs.Add(new Procedur() { Name = "Ysilenie", Price = 100, Time = new TimeSpan(0, 20, 0) });
-
+                Save();
             }
           
         }

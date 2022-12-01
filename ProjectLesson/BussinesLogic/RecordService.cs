@@ -1,41 +1,38 @@
 ﻿
 
 using Storage;
+using Storage.Response;
 
 namespace BussinesLogic
 {
     public class RecordService
     {
         private DataBase _dataBase;
-        public RecordService()
+        public RecordService(DataBase dataBase)
         {
-            _dataBase = new DataBase();
-            _dataBase.InitDataBase();
+            _dataBase = dataBase;
         }
-        public IEnumerable<Record> GetFutureRecords(User user)
-        {
-
-           return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.UserPhone == user.Phone);
-        }
-        public IEnumerable<Record> GetHistoryRecords(User user)
+        public IEnumerable<Record> GetFutureRecords(string userPhone)
         {
 
-            return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserPhone == user.Phone);
+           return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.UserPhone == userPhone);
         }
-        public IEnumerable<(DateTime,DateTime)> GetRecordsOnWeek()
+        public IEnumerable<Record> GetHistoryRecords(string userPhone)
+        {
+
+            return _dataBase.Records.Where(item => item.DateTime < DateTime.Now && item.UserPhone == userPhone);
+        }
+        public IEnumerable<RecordTuppleResponse> GetRecordsOnWeek()
         {
             return _dataBase.Records.Where(item => item.DateTime > DateTime.Now && item.DateTime < DateTime.Now.AddDays(7))
-                .Join(_dataBase.Procedurs, record => record.Procedur, procedur => procedur.Name, (record, procedur) => (record.DateTime, record.DateTime.Add(procedur.Time)));
+            .Join(_dataBase.Procedurs, record => record.ProcedurId, procedur => procedur.Id,
+            (record, procedur) => new RecordTuppleResponse() { RecordStart = record.DateTime, RecordEnd = record.DateTime.Add(procedur.Time) });
         }
-        public Record CreateRecord(string procedurName, DateTime dateTime,string userPhone,bool isApproved)
+        public Record CreateRecord(Record record)
         {
-            var record = new Record();
-            record.Procedur = procedurName;
-            record.DateTime = dateTime;
-            record.UserPhone = userPhone;
-            record.IsApproved = isApproved;
+        
             _dataBase.Records.Add(record);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
             return record;
 
 
@@ -50,19 +47,25 @@ namespace BussinesLogic
 
             return _dataBase.Records.Where(item => item.DateTime < DateTime.Now);
         }
-        public void DeleteRecord(Record record)
+        public void DeleteRecord(int id)
         {
+            var record = _dataBase.Records.FirstOrDefault(item => item.Id == id);
+            if (record == null)
+            {
+                //TODO:throw error not found
+                return;
+            }
             _dataBase.Records.Remove(record);
-            _dataBase.Save();
+            _dataBase.SaveChanges();
         }
         public IEnumerable<Record> GetAllNotApproveRecords()
         {
-            return _dataBase.Records.Where(item => !item.IsApproved);
+            return _dataBase.Records.Where(item => !item.IsApprove);
         }
         public void ApproveRecord(Record record)
         {
-            record.IsApproved = true;
-            _dataBase.Save();
+            record.IsApprove = true;
+            _dataBase.SaveChanges();
         }
     }
 }
