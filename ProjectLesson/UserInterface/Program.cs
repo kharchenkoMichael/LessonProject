@@ -10,37 +10,40 @@ var userCommandService = new UserCommandService();
 var loginService = new LoginService();
 while (true)
 {
-    Console.WriteLine("Choose command");
-    Console.WriteLine("1 - Login");
-    Console.WriteLine("2 - Registration");
-
-    var command = Console.ReadLine();
-    switch (command)
+    while (true)
     {
-        case "1":
-           myUser = loginService.Enter();
-            break;
-        case "2":
-           myUser = loginService.Registration();
-            break;
-        default:
-            Console.WriteLine("There is not so command");
-            break;
+        Console.WriteLine("Choose command");
+        Console.WriteLine("1 - Login");
+        Console.WriteLine("2 - Registration");
+
+        var command = Console.ReadLine();
+        switch (command)
+        {
+            case "1":
+                myUser = loginService.Enter();
+                break;
+            case "2":
+                myUser = loginService.Registration();
+                break;
+            default:
+                Console.WriteLine("There is not so command");
+                break;
 
 
+        }
+        if (myUser != null)
+        {
+            break;
+        }
     }
-    if (myUser != null)
+    if (!myUser.IsAdmin)
     {
-        break;
+        UserCommands(myUser, userCommandService);
     }
-}
-if (!myUser.IsAdmin)
-{
-    UserCommands(myUser, userCommandService);
-}
-else
-{
-    AdminCommands(myUser, adminCommandService);
+    else
+    {
+        AdminCommands(myUser, adminCommandService);
+    }
 }
 static void AdminCommands(User myUser, AdminCommandService adminCommandService)
 {
@@ -53,6 +56,7 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
         Console.WriteLine("4 - Cancel record");
         Console.WriteLine("5 - Look all not approved records");
         Console.WriteLine("6 - Approve record");
+        Console.WriteLine("7 - Logout");
         var command = Console.ReadLine();
         switch (command)
         {
@@ -74,6 +78,8 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
             case "6":
                 adminCommandService.ApproveRecord();
                 break;
+            case "7":
+                return;
         }
     }
 }
@@ -90,6 +96,7 @@ static void UserCommands(User myUser, UserCommandService userCommandService)
         Console.WriteLine("4 - Look list future records");
         Console.WriteLine("5 - Cancel record");
         Console.WriteLine("6 - Look history records");
+        Console.WriteLine("7 - Logout");
         var command = Console.ReadLine();
         switch (command)
         {
@@ -111,6 +118,8 @@ static void UserCommands(User myUser, UserCommandService userCommandService)
             case "6":
                 userCommandService.ShowPastRecord(myUser);
                 break;
+            case "7":
+                return;
         }
     }
 }
