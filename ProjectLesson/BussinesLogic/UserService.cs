@@ -18,8 +18,7 @@ namespace BussinesLogic
             var userFromDataBase = _dataBase.Users.FirstOrDefault(item => item.Phone == user.Phone);
             if (userFromDataBase == null)
             {
-                Console.WriteLine("user с таким номером телефона в базе данных нет");
-                return;
+                throw new ArgumentException($"couldn't find user with phone {user.Phone}");
             }
             userFromDataBase.Name = user.Name;
             userFromDataBase.LastName = user.LastName;
@@ -30,7 +29,7 @@ namespace BussinesLogic
         {
             if (_dataBase.Users.Any(item => item.Phone == user.Phone))
             {
-                throw new Exception("user с таким номером телефона уже существует");
+                throw new Exception("user whith this phone already exist");
             }
             
             _dataBase.Users.Add(user);

@@ -60,11 +60,11 @@ namespace BussinesLogic
         }
         public IEnumerable<Record> GetAllNotApproveRecords()
         {
-            return _dataBase.Records.Where(item => !item.IsApproved);
+            return _dataBase.Records.Where(item => !item.IsApprove);
         }
         public void ApproveRecord(Record record)
         {
-            record.IsApproved = true;
+            record.IsApprove = true;
             _dataBase.SaveChanges();
         }
     }

@@ -21,11 +21,11 @@ namespace UserInterface
             });
             foreach (var item in records)
             {
-                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApprove}");
             }
             while (true)
             {
-                Console.WriteLine("Введите число которое хотите подтвердить");
+                Console.WriteLine("Enter number to approve");
                 if (int.TryParse(Console.ReadLine(), out index))
                 {
                     if (index > 0 && index <= records.Count())
@@ -36,7 +36,7 @@ namespace UserInterface
             }
             var record = records[index - 1];
             client.PostAsync($"{Constants.BaseURL}/api/record/approve", JsonContent.Create(record)).Wait();
-            Console.WriteLine("Ваша дата успешно подтверждена");
+            Console.WriteLine("Approved success");
         }
 
         public void CancelRecord()
@@ -50,11 +50,11 @@ namespace UserInterface
             });
             foreach (var item in records)
             {
-                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApproved}");
+                Console.WriteLine($"{index++} : {item.DateTime}, {item.Procedur},{item.UserPhone}, {item.IsApprove}");
             }
             while (true)
             {
-                Console.WriteLine("Введите число которое хотите удалить");
+                Console.WriteLine("Enter number to delete");
                 if (int.TryParse(Console.ReadLine(), out index))
                 {
                     if (index > 0 && index <= records.Count())
@@ -65,7 +65,7 @@ namespace UserInterface
             }
             var record = records[index - 1];
             client.DeleteAsync($"{Constants.BaseURL}/api/record/{record.Id}").Wait();
-            Console.WriteLine("Ваша дата успешно удалена");
+            Console.WriteLine("Your deletion success");
         }
 
         public void CreateNewRecord()
@@ -77,7 +77,7 @@ namespace UserInterface
             DateTime date = new DateTime();
             while (true)
             {
-                Console.WriteLine("Введите название процедуры");
+                Console.WriteLine("Enter procedur name");
                 procedurName = Console.ReadLine();
                 var responce = client.GetAsync($"{Constants.BaseURL}/api/procedur/{procedurName}").Result;
                 var procedur = JsonSerializer.Deserialize<Procedur>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
@@ -92,7 +92,7 @@ namespace UserInterface
             }
             while (true)
             {
-                Console.WriteLine("Введите дату");
+                Console.WriteLine("Enter data");
                 string dateString = Console.ReadLine();
                 if (DateTime.TryParse(dateString, out date))
                 {
@@ -103,7 +103,7 @@ namespace UserInterface
             }
             while (true)
             {
-                Console.WriteLine("Введите номер телефона клиента");
+                Console.WriteLine("Enter client phone number");
                 phone = Console.ReadLine();
                 var responce = client.GetAsync($"{Constants.BaseURL}/api/user/{phone}").Result;
                 var user = JsonSerializer.Deserialize<User>(responce.Content.ReadAsStringAsync().Result, new JsonSerializerOptions()
@@ -116,9 +116,9 @@ namespace UserInterface
                 }
 
             }
-            var record = new Record() {ProcedurId = 0, DateTime = date, UserPhone = phone, IsApproved = true }; //TODO : Chose ProcedurId
+            var record = new Record() {ProcedurId = 0, DateTime = date, UserPhone = phone, IsApprove = true }; //TODO : Chose ProcedurId
             client.PostAsync($"{Constants.BaseURL}/api/record/record", JsonContent.Create(record)).Wait();
-            Console.WriteLine("Запись добавлена");
+            Console.WriteLine("Record created");
         }
 
         public void ShowAllFutureRecords()
@@ -131,7 +131,7 @@ namespace UserInterface
             });
             foreach (var record in records.OrderBy(item => item.DateTime))
             {
-                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApprove}");
             }
         }
 
@@ -145,7 +145,7 @@ namespace UserInterface
             });
             foreach(var record in records.OrderBy(item => item.DateTime))
             {
-                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApprove}");
             }
         }
 
@@ -159,7 +159,7 @@ namespace UserInterface
             });
             foreach( var record in records.OrderBy(item => item.DateTime))
             {
-                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApproved}");
+                Console.WriteLine($"{record.Procedur}, {record.UserPhone}, {record.DateTime}, {record.IsApprove}");
             }
         }
     }

@@ -10,9 +10,9 @@ var userCommandService = new UserCommandService();
 var loginService = new LoginService();
 while (true)
 {
-    Console.WriteLine("Выберите команду");
-    Console.WriteLine("1 - вход");
-    Console.WriteLine("2 - Регистрация");
+    Console.WriteLine("Choose command");
+    Console.WriteLine("1 - Login");
+    Console.WriteLine("2 - Registration");
 
     var command = Console.ReadLine();
     switch (command)
@@ -24,7 +24,7 @@ while (true)
            myUser = loginService.Registration();
             break;
         default:
-            Console.WriteLine("Нет такой команды,попробуйте еще");
+            Console.WriteLine("There is not so command");
             break;
 
 
@@ -46,13 +46,13 @@ static void AdminCommands(User myUser, AdminCommandService adminCommandService)
 {
     while (true)
     {
-        Console.WriteLine("Выберите команду");
-        Console.WriteLine("1 - посмотреть все прошедшие записи клиентов");
-        Console.WriteLine("2 - посмотреть предстоящие записи клиентов");
-        Console.WriteLine("3 - записать клиента");
-        Console.WriteLine("4 - отменить запись клиента");
-        Console.WriteLine("5 - посмотреть все не подтвержденные записи");
-        Console.WriteLine("6 - подтвердить записи клиентов");
+        Console.WriteLine("Choosse your command");
+        Console.WriteLine("1 - Look all history records of all users");
+        Console.WriteLine("2 - Look all future records of all users");
+        Console.WriteLine("3 - create record for client");
+        Console.WriteLine("4 - Cancel record");
+        Console.WriteLine("5 - Look all not approved records");
+        Console.WriteLine("6 - Approve record");
         var command = Console.ReadLine();
         switch (command)
         {
@@ -83,13 +83,13 @@ static void UserCommands(User myUser, UserCommandService userCommandService)
 {
     while (true)
     {
-        Console.WriteLine("Выберите команду");
-        Console.WriteLine("1 - посмотреть доступные процедуры");
-        Console.WriteLine("2 - посмотреть свободные даты на ближайшую неделю");
-        Console.WriteLine("3 - записаться");
-        Console.WriteLine("4 - посмотреть список всех моих ближайших процедур");
-        Console.WriteLine("5 - отказаться от процедуры");
-        Console.WriteLine("6 - посмотреть историю моих записей");
+        Console.WriteLine("Choose command");
+        Console.WriteLine("1 - Look all procedurs");
+        Console.WriteLine("2 - Look empty time for record");
+        Console.WriteLine("3 - Create record");
+        Console.WriteLine("4 - Look list future records");
+        Console.WriteLine("5 - Cancel record");
+        Console.WriteLine("6 - Look history records");
         var command = Console.ReadLine();
         switch (command)
         {

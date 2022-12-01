@@ -3510,19 +3510,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\777\\.nuget\\packages\\": {}
+    "C:\\Users\\mykhailo.kharchenko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
+      "projectUniqueName": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
       "projectName": "Storage",
-      "projectPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
-      "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECT C#\\LessonProject\\ProjectLesson\\Storage\\obj\\",
+      "projectPath": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\Storage.csproj",
+      "packagesPath": "C:\\Users\\mykhailo.kharchenko\\.nuget\\packages\\",
+      "outputPath": "C:\\myProject\\LessonProject\\ProjectLesson\\Storage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mykhailo.kharchenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3530,7 +3530,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/3M-Cloud/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -3579,7 +3580,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
